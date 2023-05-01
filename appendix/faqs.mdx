@@ -1,0 +1,148 @@
+---
+title: "❓ FAQs"
+description:
+  "In case you couldn't find the answers to your questions elsewhere... 🙈"
+---
+
+#### Risks
+
+<Accordion title="What are the risks of staking with Spirals?" >
+
+Staking with Spirals means that you can always redeem the staked asset. Let's
+break down what that means for token supported today.
+
+### Celo
+
+When you stake Celo with Spirals, that is staked on validators that power Celo's
+L1 consensus mechanism. Since L1 staking guarantees that staked Celo can be
+withdrawn\*, Spirals is also able to make this claim. Today, we do this through
+an audited liquid staking protocol called
+[Staked Celo](https://docs.stcelo.xyz/).
+
+_\*One small caveat here is_
+[_slashing penalties_](https://docs.celo.org/protocol/pos/penalties)_. This is
+why Staked Celo has a strict criteria for validator selection & rotation to
+minimize the probability of slashing._
+
+### cUSD
+
+When you stake cUSD with Spirals, our vaults deposit cUSD as collateral into a
+decentralized lending protocol called [Moola Market](https://moola.market/)
+(fork of Aave V2). Moola Market tracks a health factor for each depositor that
+measures the value of their collateral against the value of their debt. If the
+ratio falls below 1 (loan becomes under collateralized), then a liquidation
+event is triggered.
+
+This stability mechanism ensures that Moola's lending pools are
+over-collateralized so that there should always be enough liquidity to allow our
+vaults to withdraw cUSD on behalf of a Spirals staker. On top of that, Spirals
+does not take out any loans on Moola Market so our underlying cUSD collateral is
+safe and will never be liquidated.
+
+</Accordion>
+
+<Accordion title="Have the Spirals smart contracts been audited?">
+  Yes! We completed our first audit with [Verilog
+  Solutions](https://www.verilog.solutions/audits/spirals/) on September 12th, 2022.
+</Accordion>
+
+#### Impact
+
+<Accordion title="How is impact calculated?" >
+Today, the impact of a Spirals user can be understood as "the amount of positive
+climate work I've helped bring to life." Although not every project in the
+portfolio focuses on sequestering carbon, we use tCO2 (tons of carbon) as a base
+unit to understand our physical climate impact and an estimated cost of $15/ton
+for nature-based carbon removal.
+
+For example, let's say we have a user who is staking $10,000 across all green
+token vaults (5% avg APY) and leaves it staked for a year. Then this user is
+contributing $500 to climate projects, which equates to 33.33 tCO2 of physical
+climate impact.
+
+Conversion to other units like number of miles walked instead of driven was
+calculated using numbers used by an open-sourced carbon footprint calculator
+published by Berkley researchers:
+
+[https://coolclimate.berkeley.edu/calculator](https://coolclimate.berkeley.edu/calculator)
+
+</Accordion>
+
+<Accordion title="Is impact double-counted?" >
+
+No, because users of Spirals do not get to claim the carbon offset associated
+with their yield contributions. This is instead understood to be the amount of
+positive climate work they've helped bring to life, but is not contributing to
+their individual carbon neutrality.
+
+</Accordion>
+
+#### Governance
+
+<Accordion title="How are projects selected?" >
+An independent council of climate experts review each climate impact project to
+ensure we are listing high quality projects. This process will be eventually
+completely open-sourced with an opportunity for SPRL token holders to become
+engaged as well.
+
+Learn more about how that works today
+[here](https://docs.spirals.so/climate-impact/project-review-process).
+
+</Accordion>
+
+<Accordion title="Is Spirals a DAO?" >
+Eventually we will be, yes! Our approach to building Spirals is best summarized
+by _**progressive decentralization**_.
+
+For now we are mostly making decisions as a core team to learn quickly and
+understand how things can be systematized. Our intention is to gradually
+transition the decision-making process to on-chain governance coordinated by the
+$SPRL token. More on that soon!
+
+</Accordion>
+
+#### Supported Platforms
+
+<Accordion title="What chains are supported today?">
+  Today we support Celo. Soon we will support Ethereum and Polygon as well.
+</Accordion>
+
+<Accordion title="What wallets are supported today?" >
+Today we support Metamask, Coinbase Wallet and most other wallets through
+WalletConnect (Valora, Rainbow Wallet, etc.).
+
+We also support Gnosis Safes for multisig staking!
+
+![](/images/appendix/image.png)
+
+</Accordion>
+
+#### Fees
+
+<Accordion title="What are the fees for staking?" >
+As a quick refresher, there are 3 types of projects on Spirals:
+
+- **Collection** \- climate impact projects funded through forward contracts,
+  part of the default Spirals Collection
+
+- **Impact** \- climate impact projects, either `verified` or `pending review`
+  by climate council
+
+- **Ecosystem** \- projects that strengthen the ReFi ecosystem
+
+The fees for staking depends on the type of project you are supporting. If a fee
+applies, it is taken from the staking yield you earn through the protocol, which
+means that you will still be able to withdraw 100% of your principal deposit.
+
+- **Collection -** no fees
+
+- **Impact** \- 2% for verified projects, 5% for unverified projects
+
+- **Ecosystem** \- flat 5% fee
+
+</Accordion>
+
+<Accordion title="What are the fees for getting listed as a project?">
+  As a project, there are **no fees** for listing your project and setting up a
+  project page 🙂
+</Accordion>

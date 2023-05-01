@@ -1,0 +1,115 @@
+---
+title: "⭐ Key Functions"
+---
+
+### Deposit
+
+Deposits ERC-20 asset into token vault on behalf of receiver who receives the
+gTokens minted.
+
+```
+/**
+ * @dev Function to handle a deposit of an underlying asset to the vault.
+ *  Deploys the deposited assets to the yield strategy and mints new gTokens.
+ * @param _amount amount of underlying asset to deposit
+ * @param _receiver address to receive gTokens
+*/
+function deposit(
+    uint256 _amount,
+    address _receiver
+) external
+```
+
+<Note>
+  Make sure you approve the vault contract to spend this amount before calling
+  deposit.
+</Note>
+
+### Withdraw
+
+Withdraws ERC-20 asset from token vault into the receiver address. gTokens are
+burned from the owner address.
+
+```
+/**
+ * @dev Function to withdraw underlying asset from vault. This usually involves
+ *  converting the yield asset to the underlying asset first.
+ * @param _amount amount of underlying asset to withdraw
+ * @param _recevier address receiving asset withdraw from vault
+ * @param _owner address to burn gTokens from
+*/
+function withdraw(
+    uint256 _amount,
+    address _receiver,
+    address _owner
+) external
+```
+
+### Utility Methods
+
+Returns the amount of yield attributable to a gToken address holder. Denominated
+in asset.
+
+```
+/**
+ * @dev Function returning the yield associated with a user on the vault
+ * @param _owner address owning the gTokens
+*/
+function getYield(
+    address _owner
+) external view returns (uint256)
+```
+
+Returns the amount of yield attributable to a gToken address holder. Denominated
+in asset.
+
+```
+/**
+ * @dev Function returning the APY associated with the vault's
+ * underlying yield strategy, 18 decimals.
+*/
+function getAPY() external view returns (uint256)
+```
+
+Converts an amount of the asset to its equivalent in the yield asset (ex: 1 ETH
+-> 0.8 rETH).
+
+```
+/**
+ * @dev Function converting amount of asset to yield asset
+ * @param _amount amount of asset
+*/
+function convertToYieldAsset(
+    address _amount
+) external view returns (uint256)
+```
+
+Converts an amount of the yield asset to its equivalent in the asset (ex: 0.8
+rETH -> 1 ETH).
+
+```
+/**
+ * @dev Function converting amount of yield asset to asset
+ * @param _amount amount of yield asset
+*/
+function convertToAsset(
+    address _amount
+) external view returns (uint256)
+```
+
+### Other
+
+- All ERC-20 methods (`transfer`, `transferFrom`, `balanceOf`, etc.)
+
+- If underlying asset is a native token (ex: ETH), then there is also another
+  method available with the following signature:
+
+```
+/**
+ * @dev Function to handle a deposit of a native token to the vault
+ * @param _receiver address to receive gTokens
+*/
+function depositETH(
+    address _receiver
+) external payable
+```

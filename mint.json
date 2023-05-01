@@ -1,0 +1,84 @@
+{
+  "name": "Spirals",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#008E1F",
+    "light": "#E7F3E4",
+    "dark": "#015614",
+    "anchors": { "from": "#1DBE40", "to": "#016717" }
+  },
+  "topbarCtaButton": {
+    "name": "Launch App",
+    "url": "https://app.spirals.so/"
+  },
+  "topbarLinks": [
+    {
+      "name": "Learn More",
+      "url": "https://www.spirals.so/"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://medium.com/spirals-protocol"
+    },
+    {
+      "name": "Contact",
+      "icon": "envelope",
+      "url": "https://www.spirals.so/contact"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Welcome!",
+      "pages": ["welcome/hello", "welcome/spirals-what-why-how"]
+    },
+    {
+      "group": "Climate Impact",
+      "pages": [
+        "climate-impact/maximizing-climate-impact",
+        "climate-impact/project-review-process",
+        {
+          "group": "🏛 Climate Council",
+          "pages": [
+            "climate-impact/climate-council",
+            "climate-impact/climate-council/current-members",
+            "climate-impact/climate-council/adding-removing-members"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Green Tokens",
+      "pages": ["green-tokens/introduction", "green-tokens/supported-tokens"]
+    },
+    {
+      "group": "Building on Green Tokens",
+      "pages": [
+        "building-on-green-tokens/introduction",
+        "building-on-green-tokens/building-dapps",
+        "building-on-green-tokens/building-protocols",
+        "building-on-green-tokens/running-a-validator",
+        "building-on-green-tokens/key-functions",
+        "building-on-green-tokens/contract-reference"
+      ]
+    },
+    {
+      "group": "Appendix",
+      "pages": [
+        "appendix/faqs",
+        "appendix/request-for-feedback",
+        "appendix/connecting-a-celo-wallet"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/spiralsprotocol",
+    "linkedin": "https://www.linkedin.com/company/spiralsprotocol/"
+  }
+}
